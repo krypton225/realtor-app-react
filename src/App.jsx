@@ -2,8 +2,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import AllRoutes from "./data/routes-app";
 
+import { Navbar } from "./components";
+
 const App = () => (
     <BrowserRouter>
+        <Navbar />
         <Routes>
             {
                 AllRoutes.map(({ id, routePath, routeElement }) => (
@@ -13,6 +16,5 @@ const App = () => (
         </Routes>
     </BrowserRouter>
 );
-
 
 export default App;

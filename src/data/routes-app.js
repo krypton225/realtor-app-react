@@ -12,8 +12,6 @@ const routesApp = [
     { routePath: "*", routeElement: <ErrorPage /> }
 ];
 
-(() => {
-    GenerateID.insert(GenerateID.counting, routesApp);
-})();
+(() => GenerateID.insert(GenerateID.counting, routesApp))();
 
 export default routesApp;
