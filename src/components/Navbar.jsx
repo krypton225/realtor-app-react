@@ -6,7 +6,7 @@ import { Logo } from "./";
 
 const Navbar = () => {
     return (
-        <nav className="bg-white w-full h-16 border-b-2 shadow-sm sticky top-0 left-0 px-2 sm:px-2.5">
+        <nav className="bg-white w-full h-16 border-b-2 shadow-sm sticky top-0 left-0 z-50 px-2 sm:px-2.5">
             <div className="container w-full h-full flex justify-between items-center">
                 <Link to={"/"} className="cursor-pointer py-4">
                     <Logo />
