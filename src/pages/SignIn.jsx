@@ -2,12 +2,12 @@ import { useState } from "react";
 
 import { browserName } from "react-device-detect";
 
-import KeysImage from "../assets/images/keys.jpg";
-
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
-
 import { FcGoogle } from "react-icons/fc";
+
+import KeysImage from "../assets/images/keys.jpg";
 import Input from "../components/Input";
+import MainButton from "../components/MainButton";
 
 const SignIn = () => {
 
@@ -42,19 +42,15 @@ const SignIn = () => {
                             }
                         </div>
 
-                        <button type="submit"
-                            className="w-full py-2 rounded-md bg-blue-500 text-white capitalize font-semibold cursor-pointer transition duration-[0.3s] hover:bg-blue-700">
-                            sign in
-                        </button>
+                        <MainButton typeBtn="submit" btnBg="blue" btnTextColor="white" btnInnerText="sign in" />
 
-                        <div className="w-full relative before:content-[''] before:absolute before:h-[2px] before:w-[45%] before:bg-slate-800 before:top-1/2 before:left-0 after:content-[''] after:absolute after:h-[2px] after:w-[45%] after:bg-slate-800 after:top-1/2 after:right-0">
+                        <div className="w-full relative before:content-[''] before:absolute before:h-[2px] before:w-[45%] before:bg-slate-800 before:top-1/2 before:left-0 after:content-[''] after:absolute after:h-[2px] after:w-[45%] after:bg-slate-800 after:top-1/2 after:right-0 select-none">
                             <p className="text-center uppercase text-sm">or</p>
                         </div>
 
-                        <button className="w-full py-2 rounded-md flex justify-center items-center bg-red-500 text-white capitalize font-semibold cursor-pointer transition duration-[0.3s] hover:bg-red-700">
+                        <MainButton btnBg="red" btnTextColor="white" customStyles="flex justify-center items-center" btnInnerText="sign up with google account">
                             {<FcGoogle className="w-4 h-4 mr-4 bg-white rounded-full" />}
-                            sign up with google account
-                        </button>
+                        </MainButton>
                     </form>
                 </div>
             </div>
