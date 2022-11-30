@@ -7,6 +7,7 @@ import KeysImage from "../assets/images/keys.jpg";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 import { FcGoogle } from "react-icons/fc";
+import Input from "../components/Input";
 
 const SignIn = () => {
 
@@ -18,7 +19,7 @@ const SignIn = () => {
 
     return (
         <section className="container px-6">
-            <h3 className="mt-8 text-center text-lg sm:text-3xl capitalize font-semibold">sign in</h3>
+            <h3 className="mt-14 sm:mt-[4.6rem] text-center text-2xl sm:text-3xl capitalize font-semibold">sign in</h3>
 
             <div className="w-full mt-10 flex flex-col lg:flex-row justify-between items-center space-x-6">
                 <div className="sm:w-3/4 md:w-1/2 rounded-md">
@@ -27,14 +28,12 @@ const SignIn = () => {
 
                 <div className="w-full sm:w-3/4 md:w-1/2 mt-10 lg:mt-0">
                     <form className="w-[97%] flex flex-col justify-center items-center space-y-8">
-                        <input type="email" className="w-full mx-auto py-1 px-2 border border-slate-400 rounded-md
-                            placeholder:capitalize focus:outline-none active:outline-none"
-                            name="email" id="email" placeholder="enter email" autoComplete="new-password" />
+                        <Input idInput={"email"} typeInput={"email"} nameInput={"email"} placeHolderText={"enter email"} />
 
                         <div className="w-full relative cursor-pointer">
-                            <input className="w-full mx-auto py-1 px-2 border border-slate-400
-                            rounded-md placeholder:capitalize focus:outline-none active:outline-none" name="password" id="password"
-                                type={`${showEye ? "text" : "password"}`} placeholder="enter password" autoComplete="new-password" />
+                            <Input idInput={"password"} typeInput={`${showEye ? "text" : "password"}`}
+                                nameInput={"password"} placeHolderText={"enter password"} />
+
                             {
                                 checkBrowserName() ? "" :
                                     <i className="absolute p-2 right-1 top-1/2 -translate-y-1/2 text-lg text-gray-600" onClick={changeEyeIcon}>
