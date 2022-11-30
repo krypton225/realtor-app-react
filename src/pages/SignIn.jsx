@@ -6,8 +6,8 @@ import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 
 import KeysImage from "../assets/images/keys.jpg";
-import Input from "../components/Input";
-import MainButton from "../components/MainButton";
+
+import { Input, MainButton } from "../components/";
 
 const SignIn = () => {
 
